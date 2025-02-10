@@ -11,7 +11,7 @@ async function displayUser(username) {
   const response = await fetch(`${usersEndpoint}/${username}`);
   const body = await response.json(); //agregue una variable que contuviera otro await y le puse .json
   console.log(body);
-  //Cambie las comillas simples por apostrofe grave 
+  //Cambie las comillas simples por apostrofe grave, y un pequeño texto para dar un mayor entendimiento 
   name.textContent = `Nombre: ${body.name}`;
   blog.textContent = `Blog: ${body.blog}`;// cambie el # por un punto ya que puse todas en clases y no id 
   location1.textContent = `Localización: ${body.location}`;
